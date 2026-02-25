@@ -1,0 +1,88 @@
+---
+title: Governance Process
+description: The three-phase framework every Uniswap governance proposal must complete.
+---
+
+export const intro = {
+  headline: "The Uniswap Governance Process",
+  body: "This section represents the current process guidelines for developing and advancing proposals through the Uniswap Governance system. It was last updated in January 2026. The Uniswap governance process ensures that proposals receive thorough community review before being executed onchain.",
+}
+
+export const phases = [
+  {
+    number: "Phase 1",
+    label: "Request for Comment (RFC)",
+    duration: "Minimum 7 days",
+    location: "Governance Forum",
+    requirement: null,
+    purpose: "Introduce your proposal and gather initial feedback.",
+    steps: [
+      "Create a forum post titled \"RFC — [Your Title Here]\"",
+      "Clearly explain what you're proposing and why it benefits Uniswap",
+      "Engage with the community by responding to questions and feedback",
+      "Iterate on your idea based on community input before moving to Phase 2",
+    ],
+    note: "Allow at least 7 days for discussion before moving to Phase 2. Successful proposals demonstrate willingness to adapt based on community feedback. If general community consensus is not clear by the end of the 7-day period, the proposal should not move to Phase 2.",
+  },
+  {
+    number: "Phase 2",
+    label: "Temperature Check",
+    duration: "5 days",
+    location: "Snapshot",
+    requirement: "10M UNI voting \"Yes\" to advance",
+    purpose: "Gauge community sentiment through an offchain vote.",
+    steps: [
+      "Refine your proposal using feedback from the RFC phase",
+      "Create a Snapshot poll with a brief overview of your proposal from the RFC, calling out key components and any changes from RFC to Snapshot phase. The poll will last for 5 days and voters will have the option to vote \"for\", \"against\", or \"abstain\"",
+      "Update your forum post with the Snapshot poll link for ease of access",
+    ],
+    note: "The proposal must receive at least 10M UNI in \"for\" votes to move to the next phase. If \"against\" wins, the proposal does not advance.",
+  },
+  {
+    number: "Phase 3",
+    label: "Onchain Governance Proposal",
+    duration: "2-day waiting period → 7-day voting period → 2-day timelock (if passed)",
+    location: "Agora or Tally",
+    requirement: "1M UNI delegated to submit • 40M UNI voting in favor to pass",
+    purpose: "Execute binding, on-chain changes to Uniswap.",
+    steps: [
+      "Make any final refinements based on Temperature Check feedback",
+      "Prepare your proposal code using Agora or Tally for standard proposals, or write custom calldata for complex logic",
+      "Check Seatbelt — a governance helper tool that simulates the calldata in your proposal to ensure everything goes smoothly. As of winter 2026, both Agora and Tally have integrated Seatbelt simulations into their proposal posting flows.",
+      "Submit the proposal: ensure your address has 1M UNI delegated, or partner with a delegate who meets this threshold",
+      "Wait for the process: 2-day voting delay, then 7-day voting period, then 2-day timelock before execution (if passed)",
+    ],
+    note: "If the proposal receives 40M UNI in favor votes and passes, the associated onchain actions will be queued for anyone to execute after the timelock period ends.",
+  },
+]
+
+export const processChanges = {
+  headline: "Changes to the Governance Process",
+  duration: "7 days",
+  location: "Snapshot",
+  requirement: "40M UNI quorum",
+  body: "In the future, the community governance process above may need to undergo additional changes to continue to meet the needs of the Uniswap community. While an onchain vote is not required to change the majority of this process, a clear display of community support and acceptance is important for process changes to have legitimacy. Thus, changes to all off-chain community governance processes should be voted on through an off-chain Snapshot vote. There should be a 7-day voting period and 40M UNI quorum.",
+}
+
+export const tools = [
+  {
+    name: "Governance Forum",
+    description: "A Discourse-hosted forum for governance-related discussion. All governance proposals start in the forum. Community members can register accounts, post, like, and comment on various topics.",
+    href: "https://gov.uniswap.org/",
+  },
+  {
+    name: "Snapshot",
+    description: "A voting interface that allows users to signal sentiment offchain before a proposal moves to a final onchain vote. Votes on Snapshot are weighted by the number of UNI delegated to the address used to vote.",
+    href: "https://snapshot.org/#/uniswapgovernance.eth",
+  },
+  {
+    name: "Agora",
+    description: "One of two primary delegation and voting interfaces for onchain governance. Funded by a grant from the Uniswap Foundation. View all historic Uniswap proposals on Agora.",
+    href: "https://vote.uniswapfoundation.org/",
+  },
+  {
+    name: "Tally",
+    description: "One of two primary delegation and voting interfaces for onchain governance. Funded by a grant from DUNI. View all historic Uniswap proposals on Tally.",
+    href: "https://www.tally.xyz/gov/uniswap",
+  },
+]

@@ -1,0 +1,34 @@
+---
+title: Glossary
+---
+
+export const terms = [
+  {
+    term: "UNI",
+    definition: "An ERC-20 token and governance token of the Uniswap protocol. UNI grants holders the right to participate in Uniswap governance by voting on proposals and protocol changes. When delegated, UNI determines the weight of voting power — the more UNI delegated to an address, the more influential that address's votes become.",
+  },
+  {
+    term: "Delegation",
+    definition: "The process of assigning your UNI's voting power to a specific Ethereum address. Delegation activates your UNI tokens for governance participation. You can delegate to your own address (self-delegation) to vote directly, or to another address you trust to vote on your behalf. Importantly, delegation does not lock, transfer, or restrict your tokens — it only assigns voting rights. You can change your delegation at any time, and your UNI remains in your wallet with full control.",
+  },
+  {
+    term: "Proposal",
+    definition: "A formal suggestion for change that the community votes on. In Uniswap governance, proposals are executable code that, if passed, modifies the Uniswap protocol, governance contracts, or treasury. Proposals are stored in the Governor smart contract and progress through a structured voting process.",
+  },
+  {
+    term: "Quorum",
+    definition: "The minimum number of votes required for a proposal to be valid and eligible to pass. Quorum ensures that governance decisions have sufficient community participation and aren't determined by a small subset of token holders. For Uniswap, quorum measures the number of UNI votes cast in favor of a proposal, not total participation. Quorum is 40M UNI votes in favor.",
+  },
+  {
+    term: "Voting",
+    definition: "The act of casting your delegated UNI's weight in favor of or against an active proposal. Users can vote for or against single proposals once they have voting rights delegated to their address. Votes can be cast while a proposal is in the \"Active\" state of both Temperature Check and Onchain vote phases.",
+  },
+  {
+    term: "Voting Period",
+    definition: "The window during which Uniswap community members can signal their support or rejection of a particular proposal. Temperature Check voting periods are 5 days while Onchain vote voting periods are 7 days.",
+  },
+  {
+    term: "Timelock",
+    definition: "A mandatory waiting period that delays the execution of passed proposals, providing a security buffer for the community. After a proposal passes, it enters the Timelock queue rather than executing immediately. This delay gives the community time to review the approved changes and take action if needed. Once the timelock period expires, the proposal can be executed and its code will modify the protocol.",
+  },
+]

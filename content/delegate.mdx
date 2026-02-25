@@ -1,0 +1,89 @@
+---
+title: Delegate & Vote
+description: How to activate your UNI voting power and participate in Uniswap Governance.
+---
+
+export const intro = {
+  headline: "Delegate & Vote",
+  body: "UNI tokens have voting power in Uniswap Governance, but they must be delegated before you can use them to vote. Delegation binds your tokens' voting power to a specific address, either your own or someone else's who you trust to vote on your behalf.",
+  ctaAgora: { label: "Go to Agora", href: "https://vote.uniswapfoundation.org/" },
+  ctaTally: { label: "Go to Tally", href: "https://www.tally.xyz/gov/uniswap" },
+}
+
+export const delegationExplainer = {
+  headline: "Understanding Delegation",
+  body: "UNI tokens have voting power in Uniswap Governance, but they must be delegated before you can use them to vote. Delegation binds your tokens' voting power to a specific address, either your own or someone else's who you trust to vote on your behalf.",
+  callout: "You must delegate your tokens before a vote becomes active. Think of it like voter registration — it needs to happen in advance for your vote to count.",
+  requirements: [
+    "UNI Tokens",
+    "ETH for transaction costs",
+    "An Ethereum-compatible wallet",
+  ],
+}
+
+export const agoraSteps = {
+  platform: "Agora",
+  href: "https://vote.uniswapfoundation.org/",
+  options: [
+    {
+      label: "Option 1: Self-Delegate (Vote Yourself)",
+      steps: [
+        "Go to Agora's Uniswap voting dashboard",
+        "Connect your wallet via the button at the top right",
+        "Click on your wallet address at the top to select \"make delegate profile\" or \"view my profile\" if you have previously registered. If new to Agora, complete your bio and accept the terms to save your profile before proceeding.",
+        "On your profile, click the \"Delegate\" button at bottom left",
+        "Confirm you will be delegating your address in the popup",
+        "Approve and sign the transaction in your wallet",
+        "Wait for the transaction to process — this may take a few moments",
+      ],
+      confirmation: "Once confirmed, the popup will close and your voting power will appear on your profile.",
+    },
+    {
+      label: "Option 2: Delegate to Someone Else",
+      steps: [
+        "Go to Agora's Uniswap voting dashboard",
+        "Connect your wallet",
+        "Browse the list of delegates under the \"voters\" tab",
+        "Select a delegate and view their profile",
+        "Click \"Delegate\" on your chosen delegate at bottom left",
+        "Approve and sign the transaction in your wallet",
+        "Wait for the transaction to process — this may take a few moments",
+      ],
+      confirmation: "Once confirmed, the popup will close and their new voting power will appear on their profile.",
+    },
+  ],
+}
+
+export const tallySteps = {
+  platform: "Tally",
+  href: "https://www.tally.xyz/gov/uniswap",
+  steps: [
+    "Go to Tally's Uniswap voting dashboard",
+    "Connect your wallet",
+    "Click on your wallet address at the top and select \"My Voting Power\"",
+    "You should now see your UNI balance with the option to click Delegate",
+    "A popup will prompt you to select between delegating to yourself and someone else. To yourself: select \"Myself\". To someone else: select \"Someone else\" and paste their address.",
+    "Approve and sign the transaction in your wallet",
+    "Wait for the transaction to process — this may take a few moments",
+  ],
+}
+
+export const voting = {
+  headline: "How to Vote",
+  body: "If you have self-delegated and there is an active proposal, you are ready to vote in Uniswap Governance.",
+  steps: [
+    "Navigate to the proposals page on either Agora or Tally",
+    "Click on an active proposal",
+    "Review the attached details and decide your position",
+    "Choose \"Vote For\" or \"Vote Against\"",
+    "A window will appear allowing you to execute the vote — confirm the transaction in your wallet",
+    "Check that the transaction has been confirmed. You can view your votes from your profile or on the proposal itself.",
+  ],
+}
+
+export const importantNotes = [
+  "Delegation costs gas since it's recorded onchain — make sure you have ETH to cover this",
+  "You can update your delegation at any time by repeating the process outlined above",
+  "Delegation must happen before voting begins on any proposal you want to participate in",
+  "Your tokens remain in your wallet — delegation only assigns voting power, you still own and control your UNI at all times",
+]

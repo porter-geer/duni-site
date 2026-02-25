@@ -1,0 +1,61 @@
+---
+title: Welcome to DUNI
+description: The home of Uniswap Governance
+---
+
+export const hero = {
+  headline: "Welcome to DUNI, the home of Uniswap Governance",
+  subCopy: "DUNI is a collective of companies, communities, and token holders working together to steward the future of the Uniswap protocol.",
+  ctaPrimary: { label: "Learn about DUNI", href: "/duni" },
+  ctaSecondary: { label: "Start Voting", href: "/delegate" },
+}
+
+export const aboutDuni = {
+  sectionLabel: "About DUNI",
+  body: `DAOs are reshaping how communities organize and innovate. Yet despite their promise, DAOs in the U.S. have faced persistent legal uncertainty. The long-term success of the Uniswap Protocol depends on Uniswap Governance to support its growth with safety and clarity.
+
+In August 2025, the Uniswap Foundation proposed the creation of DUNI: a new legal entity formed as a Wyoming DUNA to give Uniswap Governance real-world recognition, new capabilities, and greater autonomy.`,
+  link: { label: "Read the FAQs", href: "/faq" },
+}
+
+export const governanceIntro = {
+  sectionLabel: "How Governance Works",
+  body: "Uniswap Governance is a system that allows holders of the UNI token to collectively manage, upgrade, and steer the future of the Uniswap protocol. The Uniswap governance process ensures that proposals receive thorough community review before being executed onchain. The system operates with a three-phase process that every proposal must complete.",
+  link: { label: "View full process", href: "/governance" },
+  phases: [
+    {
+      number: "01",
+      label: "Request for Comment",
+      duration: "Min. 7 days",
+      description: "Introduce your proposal on the Governance Forum and gather community feedback.",
+    },
+    {
+      number: "02",
+      label: "Temperature Check",
+      duration: "5 days",
+      description: "Gauge community sentiment through an offchain Snapshot vote. Requires 10M UNI voting yes to advance.",
+    },
+    {
+      number: "03",
+      label: "Onchain Vote",
+      duration: "7-day voting period",
+      description: "Binding onchain proposal. Requires 40M UNI in favor to pass.",
+    },
+  ],
+}
+
+export const resources = {
+  sectionLabel: "Resources",
+  cards: [
+    {
+      title: "Delegate & Vote",
+      description: "Activate your UNI voting power and participate in governance decisions.",
+      href: "/delegate",
+    },
+    {
+      title: "FAQs",
+      description: "Answers to common questions about DUNI, membership, and governance.",
+      href: "/faq",
+    },
+  ],
+}
