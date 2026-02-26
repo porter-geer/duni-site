@@ -28,7 +28,7 @@ function CopyButton({ address }: { address: string }) {
       className="flex items-center gap-1.5 text-xs text-duni-muted hover:text-duni-pink transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink rounded"
     >
       {copied ? (
-        <Check className="h-3.5 w-3.5 text-green-400" aria-hidden="true" />
+        <Check className="h-3.5 w-3.5 text-green-500" aria-hidden="true" />
       ) : (
         <Copy className="h-3.5 w-3.5" aria-hidden="true" />
       )}
@@ -54,7 +54,7 @@ export function MiscAddressCard({ entry }: MiscAddressCardProps) {
       {/* Single address */}
       {entry.address && (
         <div className="flex flex-wrap items-center gap-3">
-          <code className="font-mono text-xs text-duni-secondary bg-black/30 px-2 py-1 rounded-md select-all">
+          <code className="font-mono text-xs text-duni-secondary bg-gray-100 px-2 py-1 rounded-md select-all">
             {truncate(entry.address)}
           </code>
           <CopyButton address={entry.address} />
@@ -66,7 +66,7 @@ export function MiscAddressCard({ entry }: MiscAddressCardProps) {
         <ul className="space-y-2" role="list">
           {entry.addresses.map((addr) => (
             <li key={addr} className="flex flex-wrap items-center gap-3">
-              <code className="font-mono text-xs text-duni-secondary bg-black/30 px-2 py-1 rounded-md select-all">
+              <code className="font-mono text-xs text-duni-secondary bg-gray-100 px-2 py-1 rounded-md select-all">
                 {truncate(addr)}
               </code>
               <CopyButton address={addr} />

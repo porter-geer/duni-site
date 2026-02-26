@@ -4,9 +4,34 @@ description: The three-phase framework every Uniswap governance proposal must co
 ---
 
 export const intro = {
-  headline: "The Uniswap Governance Process",
-  body: "This section represents the current process guidelines for developing and advancing proposals through the Uniswap Governance system. It was last updated in January 2026. The Uniswap governance process ensures that proposals receive thorough community review before being executed onchain.",
+  headline: "What is Uniswap Governance?",
+  body: "Uniswap Governance is a system that allows holders of the UNI token to collectively manage, upgrade, and steer the future of the Uniswap protocol.",
 }
+
+export const overview = {
+  intro: "Uniswap Governance was created in 2020 with the launch of the UNI token and, at that time, the treasury was allocated 40% of total UNI supply.",
+  controlsIntro: "Uniswap Governance has specific controls under its domain, including:",
+  controls: [
+    "Spend funds from the treasury",
+    "Set and activate the protocol fee",
+    "Mint additional UNI, up to 2% of the total circulating supply annually",
+  ],
+  delegateNote: "UNI holders participate in governance as voters, known as delegates. To vote, holders must first activate their voting rights by assigning their UNI's voting power to an address. Any UNI holder can become a delegate by going through the delegation process — please review \"Beginners' Guide to Voting\" for more information.",
+}
+
+export const duniInfo = {
+  headline: "DUNI",
+  body: `In August 2025, The Uniswap Foundation proposed that Uniswap Governance adopt a Wyoming-registered Decentralized Unincorporated Nonprofit Association ("DUNA") as the legal structure for the Uniswap Governance Protocol. This new legal entity, called "DUNI", was purpose-built to preserve Uniswap's decentralized governance structure while enabling engagement with the offchain world (e.g., entering into contracts, retaining service providers, and fulfilling any potential regulatory and tax responsibilities).
+
+As a DUNA, the governance process did not change — instead, it enabled protections for governance participants by introducing limited liability and compliant operations as a US-regulated entity.
+
+To become a member of the DUNI, you must hold UNI tokens and engage in Uniswap Governance (e.g., you delegate your votes, or post a proposal, or vote on a proposal, etc.). Membership is fluid, and there is no requirement to disclose personal identity information to become a member. DUNI will not collect, store, or report member data.
+
+There is no minimum requirement of UNI for membership — for example, if you hold >0 UNI and you participate in the forum, you are a member of DUNI.`,
+  link: { label: "Learn more about DUNI", href: "/duni" },
+}
+
+export const processBody = "The Uniswap governance process ensures that proposals receive thorough community review before being executed onchain. Below is the three-phase framework that every proposal must complete."
 
 export const phases = [
   {
@@ -15,14 +40,14 @@ export const phases = [
     duration: "Minimum 7 days",
     location: "Governance Forum",
     requirement: null,
-    purpose: "Introduce your proposal and gather initial feedback.",
+    purpose: "The RFC phase is used to introduce proposals and gather initial feedback from the delegate community.",
     steps: [
-      "Create a forum post titled \"RFC — [Your Title Here]\"",
-      "Clearly explain what you're proposing and why it benefits Uniswap",
-      "Engage with the community by responding to questions and feedback",
-      "Iterate on your idea based on community input before moving to Phase 2",
+      "Proposal is drafted, clearly explaining what is being proposed and why it benefits Uniswap",
+      "Forum post is created, titled \"RFC — [Proposer's Title Here]\"",
+      "Proposer engages with the community by responding to questions and feedback",
+      "Proposer iterates on their idea based on community input before moving to Phase 2",
     ],
-    note: "Allow at least 7 days for discussion before moving to Phase 2. Successful proposals demonstrate willingness to adapt based on community feedback. If general community consensus is not clear by the end of the 7-day period, the proposal should not move to Phase 2.",
+    note: "RFCs should allow at least 7 days for discussion before moving to Phase 2. Successful proposals demonstrate willingness to adapt based on community feedback. If general community consensus is not clear by the end of the 7-day period, the proposal should not move to Phase 2.",
   },
   {
     number: "Phase 2",
@@ -30,29 +55,29 @@ export const phases = [
     duration: "5 days",
     location: "Snapshot",
     requirement: "10M UNI voting \"Yes\" to advance",
-    purpose: "Gauge community sentiment through an offchain vote.",
+    purpose: "The Temperature Check phase happens on Snapshot and is used to gauge community sentiment through an offchain vote, requiring 10M UNI votes in favor to proceed.",
     steps: [
-      "Refine your proposal using feedback from the RFC phase",
-      "Create a Snapshot poll with a brief overview of your proposal from the RFC, calling out key components and any changes from RFC to Snapshot phase. The poll will last for 5 days and voters will have the option to vote \"for\", \"against\", or \"abstain\"",
-      "Update your forum post with the Snapshot poll link for ease of access",
+      "Proposal is refined using feedback from the RFC phase",
+      "Snapshot poll is created with a brief overview of the proposal from the RFC, calling out key components and any changes from RFC to Snapshot phase. The poll will last for 5 days and voters will have the option to vote \"for\", \"against\", or \"abstain\"",
+      "Forum post is updated with the Snapshot poll link for ease of access",
     ],
     note: "The proposal must receive at least 10M UNI in \"for\" votes to move to the next phase. If \"against\" wins, the proposal does not advance.",
   },
   {
     number: "Phase 3",
-    label: "Onchain Governance Proposal",
+    label: "Onchain Vote",
     duration: "2-day waiting period → 7-day voting period → 2-day timelock (if passed)",
     location: "Agora or Tally",
     requirement: "1M UNI delegated to submit • 40M UNI voting in favor to pass",
-    purpose: "Execute binding, on-chain changes to Uniswap.",
+    purpose: "The onchain vote phase is the final step; if proposals pass, they execute binding, on-chain changes to Uniswap.",
     steps: [
-      "Make any final refinements based on Temperature Check feedback",
-      "Prepare your proposal code using Agora or Tally for standard proposals, or write custom calldata for complex logic",
-      "Check Seatbelt — a governance helper tool that simulates the calldata in your proposal to ensure everything goes smoothly. As of winter 2026, both Agora and Tally have integrated Seatbelt simulations into their proposal posting flows.",
-      "Submit the proposal: ensure your address has 1M UNI delegated, or partner with a delegate who meets this threshold",
-      "Wait for the process: 2-day voting delay, then 7-day voting period, then 2-day timelock before execution (if passed)",
+      "Final refinements are made based on Temperature Check feedback",
+      "Proposal code is prepared using Agora or Tally for standard proposals, or write custom calldata for complex logic",
+      "Seatbelt is checked — a governance helper tool that simulates the calldata in your proposal to ensure everything goes smoothly. As of winter 2026, both Agora and Tally have integrated Seatbelt simulations into their proposal posting flows.",
+      "Proposal is submitted by the proposer. To propose, the associated wallet address must have at least 1M UNI delegated to it",
+      "The onchain process begins: 2-day voting delay, then 7-day voting period, then 2-day timelock before execution (if passed)",
     ],
-    note: "If the proposal receives 40M UNI in favor votes and passes, the associated onchain actions will be queued for anyone to execute after the timelock period ends.",
+    note: "If the proposal receives 40M UNI in favor votes and passes, the associated onchain actions will be queued for anyone to execute after the Timelock period ends.",
   },
 ]
 

@@ -27,7 +27,7 @@ function AccordionItem({ q: question, a: answer }: AccordionItemProps) {
         aria-controls={panelId}
         onClick={() => setOpen(!open)}
         className={[
-          "flex w-full items-start justify-between gap-4 py-5 text-left",
+          "flex w-full items-start justify-between gap-4 py-5 pr-2 text-left",
           "text-base font-medium text-duni-text transition-colors",
           "hover:text-duni-pink focus-visible:outline-2 focus-visible:outline-duni-pink",
           "focus-visible:outline-offset-2 rounded-sm",

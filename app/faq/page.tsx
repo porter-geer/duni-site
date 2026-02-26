@@ -35,7 +35,7 @@ export default function FaqPage() {
             <SectionLabel className="mb-4">Resources</SectionLabel>
             <h1
               id="faq-heading"
-              className="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight mb-6"
+              className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-tight mb-6"
             >
               {intro.headline}
             </h1>
@@ -47,14 +47,13 @@ export default function FaqPage() {
       </section>
 
       {/* ── FAQ Accordion sections ────────────────────────────────── */}
-      <section aria-label="Frequently asked questions">
+      <section aria-label="Frequently asked questions" className="bg-duni-surface">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 space-y-16">
           {faqSections.map((section) => (
             <div key={section.id} id={section.id}>
-              {/* Section label */}
+              {/* Section heading */}
               <div className="mb-6">
-                <SectionLabel className="mb-2">{section.label}</SectionLabel>
-                <h2 className="text-2xl font-semibold text-white">
+                <h2 className="text-2xl font-semibold text-gray-900">
                   {section.label}
                 </h2>
               </div>
@@ -69,13 +68,12 @@ export default function FaqPage() {
       {/* ── Glossary ──────────────────────────────────────────────── */}
       <section
         aria-labelledby="glossary-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-surface-pink border-t border-duni-border"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <SectionLabel className="mb-4">Glossary</SectionLabel>
           <h2
             id="glossary-heading"
-            className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-10"
+            className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-10"
           >
             Glossary
           </h2>
@@ -86,7 +84,7 @@ export default function FaqPage() {
                 key={item.term}
                 className="rounded-2xl border border-duni-border bg-duni-surface p-6 space-y-3"
               >
-                <dt className="text-base font-semibold text-white">
+                <dt className="text-base font-semibold text-gray-900">
                   {item.term}
                 </dt>
                 <dd className="text-sm text-duni-secondary leading-relaxed">
@@ -101,17 +99,20 @@ export default function FaqPage() {
       {/* ── Technical Contracts ───────────────────────────────────── */}
       <section
         aria-labelledby="contracts-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-bg border-t border-duni-border"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 space-y-14">
           <div>
             <SectionLabel className="mb-4">Technical</SectionLabel>
             <h2
               id="contracts-heading"
-              className="text-3xl sm:text-4xl font-semibold text-white leading-snug"
+              className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-4"
             >
               Governance Contracts
             </h2>
+            <p className="text-base text-duni-secondary leading-[1.7] max-w-3xl">
+              The Uniswap protocol is governed through a set of smart contracts deployed on Ethereum mainnet. Uniswap&apos;s governance architecture was originally forked from Compound&apos;s Governor contracts — one of the earliest and most widely adopted onchain governance frameworks — and later upgraded to Governor Bravo in 2021 for improved upgradability and safety. These contracts manage the full lifecycle of governance proposals, from submission and voting through to execution, and control the UNI token and treasury.
+            </p>
           </div>
 
           {/* Active contracts */}

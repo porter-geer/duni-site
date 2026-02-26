@@ -37,7 +37,7 @@ export default function DelegatePage() {
             <SectionLabel className="mb-4">Participation</SectionLabel>
             <h1
               id="delegate-heading"
-              className="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight mb-6"
+              className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 leading-tight mb-6"
             >
               {intro.headline}
             </h1>
@@ -73,42 +73,44 @@ export default function DelegatePage() {
       {/* ── Understanding Delegation ──────────────────────────────── */}
       <section
         aria-labelledby="delegation-explainer-heading"
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28"
+        className="bg-duni-surface"
       >
-        <div className="max-w-3xl space-y-8">
-          <div>
-            <h2
-              id="delegation-explainer-heading"
-              className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-4"
-            >
-              {delegationExplainer.headline}
-            </h2>
-            <p className="text-duni-secondary leading-[1.7]">
-              {delegationExplainer.body}
-            </p>
-          </div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-3xl space-y-8">
+            <div>
+              <h2
+                id="delegation-explainer-heading"
+                className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-4"
+              >
+                {delegationExplainer.headline}
+              </h2>
+              <p className="text-duni-secondary leading-[1.7]">
+                {delegationExplainer.body}
+              </p>
+            </div>
 
-          {/* Key callout */}
-          <Callout>
-            <p className="text-base font-medium text-white">
-              {delegationExplainer.callout}
-            </p>
-          </Callout>
+            {/* Key callout */}
+            <Callout>
+              <p className="text-base font-medium text-gray-900">
+                {delegationExplainer.callout}
+              </p>
+            </Callout>
 
-          {/* Requirements */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-duni-muted mb-3">
-              You will need
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {delegationExplainer.requirements.map((req) => (
-                <span
-                  key={req}
-                  className="inline-flex items-center px-3 py-1.5 rounded-full border border-duni-border bg-duni-surface text-sm text-duni-secondary"
-                >
-                  {req}
-                </span>
-              ))}
+            {/* Requirements */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-duni-muted mb-3">
+                You will need
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {delegationExplainer.requirements.map((req) => (
+                  <span
+                    key={req}
+                    className="inline-flex items-center px-3 py-1.5 rounded-full border border-duni-border bg-duni-surface text-sm text-duni-secondary"
+                  >
+                    {req}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -117,13 +119,13 @@ export default function DelegatePage() {
       {/* ── How-to cards ──────────────────────────────────────────── */}
       <section
         aria-labelledby="how-to-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-surface-pink border-t border-duni-border"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <SectionLabel className="mb-4">Step-by-Step</SectionLabel>
           <h2
             id="how-to-heading"
-            className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-10"
+            className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-10"
           >
             How to Delegate
           </h2>
@@ -133,7 +135,7 @@ export default function DelegatePage() {
             {/* ── Agora card ── */}
             <Card className="flex flex-col gap-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-gray-900">
                   {agoraSteps.platform}
                 </h3>
                 <a
@@ -176,7 +178,7 @@ export default function DelegatePage() {
             {/* ── Tally card ── */}
             <Card className="flex flex-col gap-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-gray-900">
                   {tallySteps.platform}
                 </h3>
                 <a
@@ -212,38 +214,22 @@ export default function DelegatePage() {
       {/* ── How to Vote ───────────────────────────────────────────── */}
       <section
         aria-labelledby="voting-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-surface border-t border-duni-border"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="max-w-2xl space-y-8">
             <div>
               <h2
                 id="voting-heading"
-                className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-4"
+                className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-4"
               >
                 {voting.headline}
               </h2>
               <p className="text-duni-secondary leading-[1.7]">{voting.body}</p>
             </div>
             <StepList steps={voting.steps} />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Important Notes ───────────────────────────────────────── */}
-      <section
-        aria-labelledby="notes-heading"
-        className="border-t border-duni-border"
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="max-w-2xl">
-            <h2
-              id="notes-heading"
-              className="text-2xl font-semibold text-white mb-6"
-            >
-              Important Notes
-            </h2>
             <Callout>
+              <p className="text-sm font-semibold text-gray-900 mb-3">Important Notes</p>
               <ul className="space-y-3" role="list">
                 {importantNotes.map((note, i) => (
                   <li

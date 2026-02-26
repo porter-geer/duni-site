@@ -27,7 +27,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
       className={[
         "relative text-sm font-medium transition-colors pb-0.5",
         "focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm",
-        active ? "text-white" : "text-duni-secondary hover:text-white",
+        active ? "text-gray-900" : "text-gray-500 hover:text-gray-900",
         "after:absolute after:bottom-0 after:left-0 after:h-px after:w-full",
         "after:origin-left after:transition-transform after:duration-200",
         active
@@ -75,7 +75,7 @@ export function NavBar() {
           {/* Wordmark */}
           <Link
             href="/"
-            className="text-lg font-bold text-white tracking-tight hover:text-duni-pink transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
+            className="text-lg font-bold text-gray-900 tracking-tight hover:text-duni-pink transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
             aria-label="DUNI — home"
           >
             DUNI
@@ -92,7 +92,7 @@ export function NavBar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex items-center justify-center h-9 w-9 rounded-lg text-duni-secondary hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink"
+            className="md:hidden flex items-center justify-center h-9 w-9 rounded-lg text-gray-500 hover:text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
@@ -110,7 +110,7 @@ export function NavBar() {
       {/* Mobile overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-30 bg-black/60 md:hidden"
+          className="fixed inset-0 z-30 bg-black/40 md:hidden"
           aria-hidden="true"
           onClick={() => setMobileOpen(false)}
         />
@@ -153,7 +153,7 @@ function MobileNavLink({ href, label }: { href: string; label: string }) {
         "focus-visible:outline-2 focus-visible:outline-duni-pink",
         active
           ? "text-duni-pink bg-duni-pink/10"
-          : "text-duni-secondary hover:text-white hover:bg-white/5",
+          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50",
       ].join(" ")}
     >
       {label}

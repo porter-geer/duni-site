@@ -24,7 +24,7 @@ const externalLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-duni-border bg-duni-bg" role="contentinfo">
+    <footer className="border-t border-duni-border bg-duni-surface" role="contentinfo">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
 
@@ -32,7 +32,7 @@ export function Footer() {
           <div className="space-y-3">
             <Link
               href="/"
-              className="text-lg font-bold text-white tracking-tight hover:text-duni-pink transition-colors"
+              className="text-lg font-bold text-gray-900 tracking-tight hover:text-duni-pink transition-colors"
               aria-label="DUNI — home"
             >
               DUNI
@@ -52,7 +52,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-duni-secondary hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
+                    className="text-sm text-duni-secondary hover:text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
                   >
                     {link.label}
                   </Link>
@@ -74,7 +74,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${link.label} (opens in new tab)`}
-                    className="inline-flex items-center gap-1.5 text-sm text-duni-secondary hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
+                    className="inline-flex items-center gap-1.5 text-sm text-duni-secondary hover:text-gray-900 transition-colors focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
                   >
                     {link.label}
                     <ExternalLink className="h-3 w-3 opacity-50" aria-hidden="true" />

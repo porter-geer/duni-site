@@ -26,39 +26,21 @@ export default function HomePage() {
         className="relative overflow-hidden"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(252,114,255,0.14) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(252,114,255,0.10) 0%, transparent 70%)",
         }}
       >
-        {/* Subtle grid overlay */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#FC72FF 1px, transparent 1px), linear-gradient(90deg, #FC72FF 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 md:py-40 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-duni-pink/30 bg-duni-pink/10 px-4 py-1.5 mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-duni-pink" aria-hidden="true" />
-            <span className="text-xs font-medium text-duni-pink tracking-wide">
-              Uniswap Governance
-            </span>
-          </div>
+          {/* Unicorn */}
+          <div className="text-6xl mb-6 select-none" aria-hidden="true">🦄</div>
 
           <h1
             id="hero-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl mx-auto"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl mx-auto text-gray-900"
           >
-            {/* Split "DUNI" into pink accent */}
             Welcome to{" "}
             <span className="text-duni-pink">DUNI</span>
             {", "}
-            <span className="text-white">
-              the home of Uniswap Governance
-            </span>
+            the home of Uniswap Governance
           </h1>
 
           <p className="mt-6 text-lg text-duni-secondary leading-relaxed max-w-2xl mx-auto">
@@ -79,33 +61,35 @@ export default function HomePage() {
       {/* ── About DUNI ───────────────────────────────────────────── */}
       <section
         aria-labelledby="about-heading"
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28"
+        className="bg-duni-surface border-t border-duni-border"
       >
-        <div className="max-w-3xl">
-          <SectionLabel className="mb-4">{aboutDuni.sectionLabel}</SectionLabel>
-          <h2
-            id="about-heading"
-            className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-6"
-          >
-            {aboutDuni.sectionLabel}
-          </h2>
-          <p className="text-duni-secondary leading-[1.7] text-base mb-6 whitespace-pre-line">
-            {aboutDuni.body}
-          </p>
-          <Link
-            href={aboutDuni.link.href}
-            className="inline-flex items-center gap-2 text-sm font-medium text-duni-pink hover:underline focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
-          >
-            {aboutDuni.link.label}
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-          </Link>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="max-w-3xl">
+            <SectionLabel className="mb-4">{aboutDuni.sectionLabel}</SectionLabel>
+            <h2
+              id="about-heading"
+              className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-6"
+            >
+              {aboutDuni.headline}
+            </h2>
+            <p className="text-duni-secondary leading-[1.7] text-base mb-6 whitespace-pre-line">
+              {aboutDuni.body}
+            </p>
+            <Link
+              href={aboutDuni.link.href}
+              className="inline-flex items-center gap-2 text-sm font-medium text-duni-pink hover:underline focus-visible:outline-2 focus-visible:outline-duni-pink focus-visible:rounded-sm"
+            >
+              {aboutDuni.link.label}
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ── Governance Process ───────────────────────────────────── */}
+      {/* ── How Governance Works ─────────────────────────────────── */}
       <section
         aria-labelledby="governance-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-surface-pink"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="max-w-3xl mb-12">
@@ -114,9 +98,9 @@ export default function HomePage() {
             </SectionLabel>
             <h2
               id="governance-heading"
-              className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-6"
+              className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-6"
             >
-              {governanceIntro.sectionLabel}
+              {governanceIntro.headline}
             </h2>
             <p className="text-duni-secondary leading-[1.7] text-base">
               {governanceIntro.body}
@@ -131,7 +115,7 @@ export default function HomePage() {
                   {phase.number}
                 </div>
                 <div className="flex items-start gap-3 mb-3">
-                  <h3 className="text-base font-semibold text-white flex-1">
+                  <h3 className="text-base font-semibold text-gray-900 flex-1">
                     {phase.label}
                   </h3>
                 </div>
@@ -158,13 +142,12 @@ export default function HomePage() {
       {/* ── Resources ────────────────────────────────────────────── */}
       <section
         aria-labelledby="resources-heading"
-        className="border-t border-duni-border"
+        className="bg-duni-bg border-t border-duni-border"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <SectionLabel className="mb-4">{resources.sectionLabel}</SectionLabel>
           <h2
             id="resources-heading"
-            className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-10"
+            className="text-3xl sm:text-4xl font-semibold text-gray-900 leading-snug mb-10"
           >
             {resources.sectionLabel}
           </h2>
@@ -182,7 +165,7 @@ export default function HomePage() {
                   className="h-full flex flex-col justify-between gap-6 group-hover:border-duni-pink/40"
                 >
                   <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-white">
+                    <h3 className="text-xl font-semibold text-gray-900">
                       {card.title}
                     </h3>
                     <p className="text-sm text-duni-secondary leading-relaxed">
