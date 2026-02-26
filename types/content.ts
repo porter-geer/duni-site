@@ -15,6 +15,7 @@ export interface HeroContent {
 
 export interface AboutDuniContent {
   sectionLabel: string;
+  headline: string;
   body: string;
   link: ContentLink;
 }
@@ -28,6 +29,7 @@ export interface GovernancePhase {
 
 export interface GovernanceIntroContent {
   sectionLabel: string;
+  headline: string;
   body: string;
   link: ContentLink;
   phases: GovernancePhase[];
@@ -59,6 +61,7 @@ export interface FeatureItem {
 
 export interface FeaturesContent {
   sectionLabel: string;
+  headline: string;
   items: FeatureItem[];
 }
 
@@ -75,11 +78,42 @@ export interface OperationsContent {
   link: ContentLink;
 }
 
+export interface ResourceLinkItem {
+  label: string;
+  href: string;
+  external: boolean;
+  pdf?: boolean;
+}
+
+export interface ResourceGroup {
+  label: string;
+  items: ResourceLinkItem[];
+}
+
+export interface DuniResourcesContent {
+  sectionLabel: string;
+  headline: string;
+  groups: ResourceGroup[];
+}
+
 // ─── governance.mdx ──────────────────────────────────────────────────────────
 
 export interface GovernanceIntro {
   headline: string;
   body: string;
+}
+
+export interface GovernanceOverview {
+  intro: string;
+  controlsIntro: string;
+  controls: string[];
+  delegateNote: string;
+}
+
+export interface GovernanceDuniInfo {
+  headline: string;
+  body: string;
+  link: ContentLink;
 }
 
 export interface FullPhase {

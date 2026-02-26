@@ -7,7 +7,10 @@ import type {
   FeaturesContent,
   MembershipContent,
   OperationsContent,
+  DuniResourcesContent,
   GovernanceIntro,
+  GovernanceOverview,
+  GovernanceDuniInfo,
   FullPhase,
   ProcessChanges,
   GovernanceTool,
@@ -35,10 +38,14 @@ declare module "@/content/duni.mdx" {
   export const features: FeaturesContent;
   export const membership: MembershipContent;
   export const operations: OperationsContent;
+  export const resources: DuniResourcesContent;
 }
 
 declare module "@/content/governance.mdx" {
   export const intro: GovernanceIntro;
+  export const overview: GovernanceOverview;
+  export const duniInfo: GovernanceDuniInfo;
+  export const processBody: string;
   export const phases: FullPhase[];
   export const processChanges: ProcessChanges;
   export const tools: GovernanceTool[];
