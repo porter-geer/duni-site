@@ -108,6 +108,8 @@ export interface GovernanceOverview {
   controlsIntro: string;
   controls: string[];
   delegateNote: string;
+  delegateLink: ContentLink;
+  delegateNoteSuffix: string;
 }
 
 export interface GovernanceDuniInfo {

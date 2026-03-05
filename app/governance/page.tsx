@@ -101,7 +101,22 @@ export default function GovernancePage() {
             </div>
             <p className="text-base text-duni-secondary leading-[1.7]">
               {overview.delegateNote}
+              <Link href={overview.delegateLink.href} className="text-duni-pink hover:underline font-medium">
+                {overview.delegateLink.label}
+              </Link>
+              {overview.delegateNoteSuffix}
             </p>
+            <Callout>
+              You can learn more about UNI&apos;s onchain controls, value accrual, verifiability and distribution via{" "}
+              <a
+                href="https://otf.aragon.org/tokens/uni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-duni-pink hover:underline font-medium"
+              >
+                Aragon&apos;s Ownership Token Framework
+              </a>.
+            </Callout>
           </div>
         </div>
       </section>
